@@ -19,14 +19,22 @@ ufw_create_policies() {
 	_ufw_internal "${FUNCNAME[0]}"
 }
 
-ufw_allow() {
-	_ufw_internal "${FUNCNAME[0]}" "$@"
-}
-
 ufw_exec() {
 	_ufw_internal "${FUNCNAME[0]}" "$@"
 }
 
+ufw_allow() {
+	_ufw_internal "${FUNCNAME[0]}" "$@"
+}
+
+ufw_disallow() {
+	_ufw_internal "${FUNCNAME[0]}" "$@"
+}
+
 ufw_enable() {
+	_ufw_internal "${FUNCNAME[0]}"
+}
+
+ufw_disable() {
 	_ufw_internal "${FUNCNAME[0]}"
 }
